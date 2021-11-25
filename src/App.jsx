@@ -1,3 +1,4 @@
+
 import React, {
   createContext,
   useContext,
@@ -99,6 +100,7 @@ const List = () => {
   );
 };
 
+
 function reducer(state, action) {
   switch (action.type) {
     case 'update-list':
@@ -111,6 +113,7 @@ function reducer(state, action) {
       return state;
   }
 }
+
 const StoreProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
